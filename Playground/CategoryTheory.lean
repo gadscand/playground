@@ -1,12 +1,18 @@
-def f (a : Int) := a
-def g (a: Int) := a + 1
-def gf (a : Int): Int := g (f a)
+-- Identidade
+def f (a : Int) := a + 1
+def my_id (a : Int) := a - 1
+#eval my_id (f 1) == 1 -- Verifica se my_id funciona
+-- Composição
+def g (a : Int) := a * 2
+def g ∘ f := g f a
+#eval g ∘ f 1
 
-#eval id f 1
-#eval gf 1
+-- Desafios págia 43 / 25
 
-#eval if gf (gf 1) == gf 1 then "true" else "false" -- Errado
+-- Sim, a WWW é uma categoria que relaciona páginas (objetos) a outras páginas (hyperlinks)
+-- Sim, hyperlinks são morfismos
 
--- Exercicios página 10, trabalhar nesse tema (Desafios)
+-- Sim, um morfismo de uma pessoa nela mesma séria a identidade e as relações de amizades
+-- levam uma pessoa a um amigo em particular.
 
--- Página 17 / 35
+-- Pesquisar "Quando directed graph é uma categoria"
